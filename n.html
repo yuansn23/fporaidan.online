@@ -1,1 +1,428 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nigeria Poverty Alleviation Subsidy Commission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#006400',
+                        secondary: '#FFD700',
+                        accent: '#25D366',
+                        light: '#F5F5F5',
+                        dark: '#333333'
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite'
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .whatsapp-button {
+            background-color: #25D366;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        .whatsapp-fixed {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-fixed:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #FF0000;
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #006400 0%, #25D366 100%);
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-animated {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .dark .hero-gradient {
+            background: linear-gradient(135deg, #004d00 0%, #1da851 100%);
+        }
+        
+        /* Prevent scaling on mobile */
+        @media (max-width: 768px) {
+            .whatsapp-fixed {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light dark:bg-gray-900">
+    <!-- WhatsApp Fixed Icon -->
+    <div class="whatsapp-fixed cursor-pointer" onclick="opensite()">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+        <div class="notification-badge">1</div>
+    </div>
+
+    <!-- Header -->
+    <header class="w-full">
+        <div class="hero-gradient text-white">
+            <div class="container mx-auto px-4 py-8 md:py-12">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/2cc45110d6938cf666429f4b0f9b051e733c685d37bc81d2ceb95b39ff2b02d4?w=712&h=706" alt="Federal Ministry Logo" class="h-20 md:h-24">
+                    </div>
+                    <div class="text-center md:text-right">
+                        <button onclick="opensite()" class="whatsapp-button text-white font-bold py-3 px-6 rounded-full shadow-lg flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                            Contact Us on WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Nigeria Poverty Alleviation Subsidy Commission</h1>
+                    <p class="text-xl md:text-2xl italic mb-6">Building a Prosperous Nigeria Together</p>
+                    <button onclick="opensite()" class="whatsapp-button btn-animated text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg">
+                        Join Our Initiative
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Vision Section -->
+    <section class="py-12 md:py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary dark:text-green-400 mb-8">Core Vision</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-green-50 dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary dark:bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                        <span class="font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark dark:text-white">Eliminating Generational Poverty</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Building a sustainable future by breaking the cycle of poverty</p>
+                </div>
+                
+                <div class="card bg-green-50 dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary dark:bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                        <span class="font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark dark:text-white">Empowering Vulnerable Groups</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Enabling economic independence for all Nigerians</p>
+                </div>
+                
+                <div class="card bg-green-50 dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-primary dark:bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                        <span class="font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark dark:text-white">Creating Inclusive Growth Communities</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Fostering community development that leaves no one behind</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button onclick="opensite()" class="whatsapp-button text-white font-bold py-3 px-8 rounded-full shadow-lg inline-flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    Learn More on WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-12 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <!-- Hope House Program -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="w-full lg:w-1/2">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/07d95d4e5cf56dd618097eb72ea82cc76f985026ef0f79e3e869866d0a67b5ef?w=1224&h=816" alt="Professional woman with tablet" class="rounded-lg shadow-lg w-full h-auto">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-primary dark:text-green-400 mb-6">Hope House Program</h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">Comprehensive support for families in need, providing essentials and opportunities for sustainable livelihood.</p>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">1</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Monthly Living Stipends</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Food and education subsidies for families in need</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">2</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Housing Renovation Fund</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Special funding for home improvements and repairs</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">3</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Clean Water Project</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Expanding access to clean drinking water</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">4</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Vocational Skills Matching</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Connecting individuals with relevant training opportunities</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <button onclick="opensite()" class="whatsapp-button text-white font-bold py-3 px-6 rounded-full shadow-lg inline-flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Inquire Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Women's Empowerment Program -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-8">
+                    <div class="w-full lg:w-1/2">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/5947b4c61f10247a046190f0f36453802aa53402b8a25f1e640fe372036082c9?w=1224&h=816" alt="Smiling woman with headwrap" class="rounded-lg shadow-lg w-full h-auto">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-primary dark:text-green-400 mb-6">Women's Empowerment Program</h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">Supporting women to achieve financial independence through skills development and healthcare support.</p>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">1</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Vocational Skills Training</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Textile production, e-commerce, and handicraft skills</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">2</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Maternal & Child Health Support</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Comprehensive healthcare packages for mothers and infants</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <button onclick="opensite()" class="whatsapp-button text-white font-bold py-3 px-6 rounded-full shadow-lg inline-flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Join Program
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Care Program -->
+            <div>
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="w-full lg:w-1/2">
+                        <img src="https://pfst.cf2.poecdn.net/base/image/af0817afe159886c1c13f9d2f96b111cfc492bd8c15bd9cc4d7eb3e2b19defa2?w=1224&h=816" alt="People at fruit market" class="rounded-lg shadow-lg w-full h-auto">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-3xl font-bold text-primary dark:text-green-400 mb-6">Special Care Program</h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">Targeted support for vulnerable populations with specific needs.</p>
+                        
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">1</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Disability Employment Training</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Skills development for persons with disabilities</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">2</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">School Nutrition Support</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Nutritional assistance for children in schools</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-secondary text-primary dark:text-dark font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">3</span>
+                                <div>
+                                    <h4 class="font-bold text-dark dark:text-white">Youth Skills Scholarships</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Financial support for youth skills development</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <button onclick="opensite()" class="whatsapp-button text-white font-bold py-3 px-6 rounded-full shadow-lg inline-flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 hero-gradient text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">WhatsApp Green Channel</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Connect directly with our support team to learn more about our programs and how you can benefit or contribute.</p>
+            
+            <button onclick="opensite()" class="bg-white text-accent hover:bg-gray-100 font-bold py-4 px-8 rounded-full shadow-lg text-xl btn-animated inline-flex items-center">
+                <i class="fab fa-whatsapp text-accent mr-2 text-2xl"></i>
+                Connect on WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Impact Statistics -->
+    <section class="py-12 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary dark:text-green-400 text-center mb-12">Witnessing Change Together</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-green-50 dark:bg-gray-700 p-8 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary dark:text-green-400 mb-4">63,200+</div>
+                    <p class="text-gray-700 dark:text-gray-300">Families received production toolkits including agricultural equipment, quality seeds, and technical manuals</p>
+                </div>
+                
+                <div class="card bg-green-50 dark:bg-gray-700 p-8 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary dark:text-green-400 mb-4">81.7%-81.4%</div>
+                    <p class="text-gray-700 dark:text-gray-300">Women achieving sustainable income through entrepreneurship programs</p>
+                </div>
+                
+                <div class="card bg-green-50 dark:bg-gray-700 p-8 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-primary dark:text-green-400 mb-4">23</div>
+                    <p class="text-gray-700 dark:text-gray-300">Communities have entered sustainable development phases</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button onclick="opensite()" class="whatsapp-button text-white font-bold py-3 px-8 rounded-full shadow-lg inline-flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    Be Part of Our Success
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Our Mission</h3>
+                    <p class="mb-4">Ensuring that people are well-fed, well-rested, and living with dignity. Eliminating poverty is our goal.</p>
+                    <p>Working together for a better Nigeria tomorrow.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                    <p class="mb-2">Email: nirudna9823@gmail.com</p>
+                    <p>Poverty Alleviation Office: Radio House, Herbert Macaulay Way (South) Area 8, PMB 242, Garki - Abuja</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center">
+                <p class="text-sm text-gray-400 mb-4">© 2023 Nigeria Poverty Alleviation Subsidy Commission. All rights reserved.</p>
+                <p class="text-sm text-gray-400">This site complies with Google's advertising policies. We do not collect personal data without consent and ensure transparency in all our communications.</p>
+                <div class="mt-4">
+                    <button onclick="opensite()" class="whatsapp-button text-white font-bold py-2 px-5 rounded-full shadow-lg inline-flex items-center text-sm">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Function to open WhatsApp
+        function opensite() {
+            // This would typically open WhatsApp with a predefined message
+            // For demo purposes, just alert that it would redirect
+            alert("Redirecting to WhatsApp...");
+            // In a real implementation, you would use something like:
+            // window.open('https://wa.me/1234567890', '_blank');
+        }
+        
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
